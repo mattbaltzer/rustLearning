@@ -11,6 +11,9 @@ fn main() {
     // Carry down the OWNERSHIP from numbers3 into the function of average since you don't need another Vec after this, it gets removed once it is called below
     let average_of_nums = average(numbers3);
 
+    // You can also just reuse numbers for each implementation of OWNERSHIP instead of creating numbers2, numbers3, etc.
+    // This is called Shadowing. Unsure if it's good or bad.
+
     println!("Sum of these numbers: {}", sum_of_nums);
     println!("Product of these numbers: {}", product_of_nums);
     println!("Average of these numbers: {}", average_of_nums);

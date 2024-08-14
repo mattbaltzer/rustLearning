@@ -56,7 +56,7 @@ fn average(numbers: &[i64]) -> i64 {
 }
 
 // This sets up the lifetime annotation. numbers1 has a lifetime annotation of a and numbers2 has a lifetime annotation of b
-// Then you call a reference to the vec and attach the annotations to each
+// Then you call a reference to the slice of the vec and attach the annotations to each
 // Then you would get a return a slice of a vec with each separate lifetime annotation
 fn first_three<'a, 'b>(numbers1: &'a Vec<i64>, numbers2: &'b Vec<i64>) -> (&'a [i64], &'b [i64]) {
     (&numbers1[0..3], &numbers2[0..3])
